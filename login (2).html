@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - متجر إلكتروني للالكترونيات</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- صفحة تسجيل الدخول -->
+    <div class="login-page">
+        <div class="login-container">
+            <!-- شعار المتجر -->
+            <div class="login-logo">
+                <span class="logo-icon">🖥️</span>
+                <h1>Electronic Store</h1>
+                <p class="sub-title">متجر إلكتروني للالكترونيات</p>
+            </div>
+
+            <!-- بطاقة تسجيل الدخول -->
+            <div class="login-card">
+                <h2>تسجيل الدخول</h2>
+                <p class="login-subtitle">أدخل بياناتك للدخول إلى المتجر</p>
+
+                <!-- نموذج تسجيل الدخول -->
+                <form id="loginForm" class="login-form">
+                    <!-- حقل اسم المستخدم -->
+                    <div class="form-group">
+                        <label for="username">اسم المستخدم</label>
+                        <div class="input-group">
+                            <span class="input-icon">👤</span>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                placeholder="أدخل اسم المستخدم"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- حقل كلمة المرور -->
+                    <div class="form-group">
+                        <label for="password">كلمة المرور</label>
+                        <div class="input-group">
+                            <span class="input-icon">🔒</span>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="أدخل كلمة المرور"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- رسائل الخطأ والنجاح -->
+                    <div id="loginMessage" class="login-message"></div>
+
+                    <!-- أزرار التحكم -->
+                    <div class="login-buttons">
+                        <button type="submit" class="btn btn-primary btn-login">تسجيل الدخول</button>
+                        <button type="reset" class="btn btn-secondary btn-reset">إعادة تعيين</button>
+                    </div>
+                </form>
+
+                <!-- معلومات المساعدة -->
+                <div class="login-help">
+                    <p>👨‍💼 اسم المستخدم: <strong>admin</strong></p>
+                    <p>🔑 كلمة المرور: <strong>admin123</strong></p>
+                </div>
+            </div>
+
+            <!-- حقوق النشر -->
+            <div class="login-footer">
+                <p>© 2026 Electronic Store. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ربط ملف JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

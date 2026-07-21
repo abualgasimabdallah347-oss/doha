@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - متجر إلكتروني للالكترونيات</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-icon">🖥️</span>
+                <span>Electronic Store</span>
+            </div>
+            
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html" class="active">🏠 الرئيسية</a></li>
+                <li><a href="products.html">📦 المنتجات</a></li>
+                <li><a href="add-product.html">➕ إضافة منتج</a></li>
+                <li><a href="manage.html">⚙️ إدارة</a></li>
+                <li><a href="cart.html">🛒 سلة <span class="badge cart-badge" style="display:none;">0</span></a></li>
+                <li><a href="contact.html">📞 تواصل</a></li>
+                <li><a href="#" class="logout-btn">🚪 خروج</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <!-- قسم الهيرو -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>أفضل الأجهزة الإلكترونية بين يديك</h1>
+                <p>اكتشف أحدث المنتجات الإلكترونية بأفضل الأسعار. هواتف، لابتوب، سماعات، ساعات ذكية والمزيد!</p>
+                <a href="products.html" class="btn">تسوق الآن →</a>
+            </div>
+            <div class="hero-image">💻</div>
+        </section>
+
+        <!-- إحصائيات -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-icon">📦</span>
+                <div class="stat-number" id="productCount">0</div>
+                <div class="stat-label">عدد المنتجات</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📂</span>
+                <div class="stat-number" id="categoryCount">0</div>
+                <div class="stat-label">عدد الأقسام</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">👥</span>
+                <div class="stat-number">1,234</div>
+                <div class="stat-label">عملاء سعداء</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <div class="stat-number">4.8</div>
+                <div class="stat-label">تقييم المتجر</div>
+            </div>
+        </div>
+
+        <!-- المنتجات المميزة -->
+        <h2 class="page-title">✨ المنتجات المميزة</h2>
+        <p class="page-subtitle">أفضل وأحدث المنتجات الإلكترونية في متجرنا</p>
+        
+        <div class="products-grid" id="featuredProducts">
+            <!-- سيتم عرض المنتجات بواسطة JavaScript -->
+        </div>
+        
+        <div class="text-center mt-30">
+            <a href="products.html" class="btn btn-primary">عرض جميع المنتجات →</a>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>🖥️ Electronic Store</h4>
+                <p>متجر إلكتروني متخصص في بيع الأجهزة والمنتجات الإلكترونية بأفضل الأسعار.</p>
+            </div>
+            <div>
+                <h4>روابط سريعة</h4>
+                <p><a href="products.html">📦 المنتجات</a></p>
+                <p><a href="add-product.html">➕ إضافة منتج</a></p>
+                <p><a href="cart.html">🛒 سلة المشتريات</a></p>
+            </div>
+            <div>
+                <h4>التواصل</h4>
+                <p>📧 info@electronicstore.com</p>
+                <p>📞 +966 50 000 0000</p>
+                <p>📍 الرياض، المملكة العربية السعودية</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Electronic Store. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة منتج - متجر إلكتروني للالكترونيات</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="brand-icon">🖥️</span>
+                <span>Electronic Store</span>
+            </div>
+            
+            <div class="navbar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="index.html">🏠 الرئيسية</a></li>
+                <li><a href="products.html">📦 المنتجات</a></li>
+                <li><a href="add-product.html" class="active">➕ إضافة منتج</a></li>
+                <li><a href="manage.html">⚙️ إدارة</a></li>
+                <li><a href="cart.html">🛒 سلة <span class="badge cart-badge" style="display:none;">0</span></a></li>
+                <li><a href="contact.html">📞 تواصل</a></li>
+                <li><a href="#" class="logout-btn">🚪 خروج</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="form-container">
+            <h2>➕ إضافة منتج جديد</h2>
+            <p class="page-subtitle">أدخل بيانات المنتج لإضافته إلى المتجر</p>
+            
+            <form id="addProductForm">
+                <div class="form-grid">
+                    <!-- اسم المنتج -->
+                    <div class="form-group">
+                        <label for="productName">اسم المنتج *</label>
+                        <div class="input-group">
+                            <span class="input-icon">📱</span>
+                            <input type="text" id="productName" placeholder="أدخل اسم المنتج" required>
+                        </div>
+                    </div>
+
+                    <!-- الشركة -->
+                    <div class="form-group">
+                        <label for="brand">الشركة *</label>
+                        <div class="input-group">
+                            <span class="input-icon">🏷️</span>
+                            <input type="text" id="brand" placeholder="أدخل اسم الشركة" required>
+                        </div>
+                    </div>
+
+                    <!-- الفئة -->
+                    <div class="form-group">
+                        <label for="category">الفئة *</label>
+                        <div class="input-group">
+                            <span class="input-icon">📂</span>
+                            <select id="category" required>
+                                <option value="">اختر الفئة</option>
+                                <option value="هواتف ذكية">هواتف ذكية</option>
+                                <option value="لابتوب">لابتوب</option>
+                                <option value="سماعات">سماعات</option>
+                                <option value="ساعات ذكية">ساعات ذكية</option>
+                                <option value="إكسسوارات">إكسسوارات</option>
+                                <option value="أجهزة منزلية">أجهزة منزلية</option>
+                                <option value="كمبيوتر لوحي">كمبيوتر لوحي</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- السعر -->
+                    <div class="form-group">
+                        <label for="price">السعر (ر.س) *</label>
+                        <div class="input-group">
+                            <span class="input-icon">💰</span>
+                            <input type="number" id="price" placeholder="أدخل السعر" min="0" required>
+                        </div>
+                    </div>
+
+                    <!-- سنة الإصدار -->
+                    <div class="form-group">
+                        <label for="year">سنة الإصدار *</label>
+                        <div class="input-group">
+                            <span class="input-icon">📅</span>
+                            <input type="number" id="year" placeholder="مثال: 2024" min="2000" max="2026" required>
+                        </div>
+                    </div>
+
+                    <!-- التقييم -->
+                    <div class="form-group">
+                        <label for="rating">التقييم</label>
+                        <div class="input-group">
+                            <span class="input-icon">⭐</span>
+                            <input type="number" id="rating" placeholder="من 0 إلى 5" min="0" max="5" step="0.1">
+                        </div>
+                    </div>
+
+                    <!-- حالة المنتج -->
+                    <div class="form-group full-width">
+                        <label for="status">حالة المنتج *</label>
+                        <div class="input-group">
+                            <span class="input-icon">📌</span>
+                            <select id="status" required>
+                                <option value="متوفر">متوفر</option>
+                                <option value="غير متوفر">غير متوفر</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- رابط الصورة -->
+                    <div class="form-group full-width">
+                        <label for="image">رابط الصورة</label>
+                        <div class="input-group">
+                            <span class="input-icon">🖼️</span>
+                            <input type="text" id="image" placeholder="ضع رابط الصورة أو استخدم الإيموجي">
+                        </div>
+                    </div>
+
+                    <!-- الوصف -->
+                    <div class="form-group full-width">
+                        <label for="description">الوصف *</label>
+                        <div class="input-group">
+                            <span class="input-icon">📝</span>
+                            <textarea id="description" placeholder="أدخل وصفاً مفصلاً للمنتج" rows="4" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">➕ إضافة المنتج</button>
+                    <button type="reset" class="btn btn-secondary">🗑️ مسح الحقول</button>
+                    <a href="products.html" class="btn btn-secondary">🔙 رجوع</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4>🖥️ Electronic Store</h4>
+                <p>متجر إلكتروني متخصص في بيع الأجهزة والمنتجات الإلكترونية بأفضل الأسعار.</p>
+            </div>
+            <div>
+                <h4>روابط سريعة</h4>
+                <p><a href="products.html">📦 المنتجات</a></p>
+                <p><a href="add-product.html">➕ إضافة منتج</a></p>
+                <p><a href="cart.html">🛒 سلة المشتريات</a></p>
+            </div>
+            <div>
+                <h4>التواصل</h4>
+                <p>📧 info@electronicstore.com</p>
+                <p>📞 +966 50 000 0000</p>
+                <p>📍 الرياض، المملكة العربية السعودية</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Electronic Store. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
